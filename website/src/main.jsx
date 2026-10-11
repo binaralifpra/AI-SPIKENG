@@ -8,7 +8,7 @@ import './index.css'
 // No StrictMode: its double-mounted effects would open every AI session twice
 // and advance the training day twice.
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.BASE_URL}>
     <ThemeProvider>
       <AuthProvider>
         <App />
